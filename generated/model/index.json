@@ -1,0 +1,199 @@
+{
+  "name": "index",
+  "pouex": {
+    "name": "Tux",
+    "birthday": "", 
+    "body": {
+      	"body": {
+      	  "imageUrl": "imgs/body.png",
+      	  "default": "imgs/body.png",
+      	  "subparts": {
+      	    "eyebrows": {
+      	      "imageUrl": "imgs/eyebrows.png",
+      	      "default": "imgs/eyebrows.png",
+      	      "subparts": {
+      	      }
+      	    }
+      	    ,
+      	    "eye_dx": {
+      	      "imageUrl": "imgs/eye_dx.png",
+      	      "default": "imgs/eye_dx.png",
+      	      "subparts": {
+      	      }
+      	    }
+      	    ,
+      	    "eye_sx": {
+      	      "imageUrl": "imgs/eye_sx.png",
+      	      "default": "imgs/eye_sx.png",
+      	      "subparts": {
+      	      }
+      	    }
+      	    ,
+      	    "mouth": {
+      	      "imageUrl": "imgs/mouth.png",
+      	      "default": "imgs/mouth.png",
+      	      "subparts": {
+      	      }
+      	    }
+      	    ,
+      	    "arm_dx": {
+      	      "imageUrl": "imgs/arm_dx.png",
+      	      "default": "imgs/arm_dx.png",
+      	      "subparts": {
+      	      }
+      	    }
+      	    ,
+      	    "arm_sx": {
+      	      "imageUrl": "imgs/arm_sx.png",
+      	      "default": "imgs/arm_sx.png",
+      	      "subparts": {
+      	      }
+      	    }
+      	    ,
+      	    "foot_dx": {
+      	      "imageUrl": "imgs/foot_dx.png",
+      	      "default": "imgs/foot_dx.png",
+      	      "subparts": {
+      	      }
+      	    }
+      	    ,
+      	    "foot_sx": {
+      	      "imageUrl": "imgs/foot_sx.png",
+      	      "default": "imgs/foot_sx.png",
+      	      "subparts": {
+      	      }
+      	    }
+      	  }
+      	}
+    },
+	"features": {
+      "Weight": {
+  	    "value": 20.0,
+	    "default": 20.0,
+  	    "minimum": 5.0,
+	    "maximum": 100.0,
+	    "type": "POSITIVE"
+      }
+      ,
+      "Happiness": {
+  	    "value": 3.0,
+	    "default": 3.0,
+  	    "minimum": 0.0,
+	    "maximum": 10.0,
+	    "type": "POSITIVE"
+      }
+      ,
+      "Dirty": {
+  	    "value": 30.0,
+	    "default": 30.0,
+  	    "minimum": 0.0,
+	    "maximum": 100.0,
+	    "type": "POSITIVE"
+      }
+      ,
+      "Age": {
+  	    "value": 0.0,
+	    "default": 0.0,
+  	    "minimum": 0.0,
+	    "maximum": 100.0,
+	    "type": "POSITIVE"
+      }
+      ,
+      "Hungry": {
+  	    "value": 10.0,
+	    "default": 10.0,
+  	    "minimum": 0.0,
+	    "maximum": 100.0,
+	    "type": "POSITIVE"
+      }
+    },
+    "states": {
+      "Happy": {
+        "active": false
+      }
+      ,
+      "TheEnd": {
+        "active": false
+      }
+      ,
+      "Dirty": {
+        "active": false
+      }
+      ,
+      "Hungry": {
+        "active": false
+      }
+    },
+    "actions": {
+      "Play": [ 
+        {
+      	  "feature": "Weight",
+          "operation": "1.0",
+          "operator": "-"
+        }
+        ,
+        {
+      	  "feature": "Happiness",
+          "operation": "1.0",
+          "operator": "+"
+        }
+        ,
+        {
+      	  "feature": "Dirty",
+          "operation": "5.0",
+          "operator": "+"
+        }
+        ,
+        {
+      	  "feature": "Hungry",
+          "operation": "5.0",
+          "operator": "+"
+        }
+      ]
+      ,
+      "Eat": [ 
+        {
+      	  "feature": "Weight",
+          "operation": "10.0",
+          "operator": "+"
+        }
+        ,
+        {
+      	  "feature": "Hungry",
+          "operation": "5.0",
+          "operator": "-"
+        }
+      ]
+      ,
+      "Clean": [ 
+        {
+      	  "feature": "Happiness",
+          "operation": "1.0",
+          "operator": "-"
+        }
+        ,
+        {
+      	  "feature": "Dirty",
+          "operation": "15.0",
+          "operator": "-"
+        }
+      ]
+      ,
+      "happy_birthday": [ 
+        {
+      	  "feature": "Age",
+          "operation": "1.0",
+          "operator": "+"
+        }
+      ]
+      ,
+      "each_1s": [ 
+        {
+      	  "feature": "Hungry",
+          "operation": "0.01",
+          "operator": "+"
+        }
+      ]
+    }
+  }
+}

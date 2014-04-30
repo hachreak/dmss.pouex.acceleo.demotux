@@ -1,0 +1,85 @@
+.body-part{
+  display: inline-block;
+  position: relative;
+}
+.main{ margin-top: 5em; }
+.main .jumbotron{ padding-top: 1em; }
+/*.game-panel > div{ width: 50%; margin: 0px auto;  }*/
+.game-panel img{ width: 100%; }
+.game-panel-body{ height: 250px; }
+
+#body{
+  /*background: transparent url('../imgs/body.png');*/
+  background-size: cover; 
+  width: 190px;
+  height: 179px;
+  top: 0px;
+  left: 0px;
+}
+
+#body-eyebrows{
+  /*background: transparent url('../imgs/eyebrows.png');*/
+  background-size: cover; 
+  width: 76px;
+  height: 32px;
+  top: 0px;
+  left: 58px;
+}
+#body-eye_dx{
+  /*background: transparent url('../imgs/eye_dx.png');*/
+  background-size: cover; 
+  width: 37px;
+  height: 45px;
+  top: 14px;
+  left: -20px;
+}
+#body-eye_sx{
+  /*background: transparent url('../imgs/eye_sx.png');*/
+  background-size: cover; 
+  width: 35px;
+  height: 34px;
+  top: 11px;
+  left: -25px;
+}
+#body-mouth{
+  /*background: transparent url('../imgs/mouth.png');*/
+  background-size: cover; 
+  width: 30px;
+  height: 24px;
+  top: 28px;
+  left: -80px;
+}
+#body-arm_dx{
+  /*background: transparent url('../imgs/arm_dx.png');*/
+  background-size: cover; 
+  width: 37px;
+  height: 61px;
+  top: 0px;
+  left: 10px;
+}
+#body-arm_sx{
+  /*background: transparent url('../imgs/arm_sx.png');*/
+  background-size: cover; 
+  width: 37px;
+  height: 61px;
+  top: 0px;
+  left: 100px;
+}
+#body-foot_dx{
+  /*background: transparent url('../imgs/foot_dx.png');*/
+  background-size: cover; 
+  width: 61px;
+  height: 31px;
+  top: 48px;
+  left: -50px;
+}
+#body-foot_sx{
+  /*background: transparent url('../imgs/foot_sx.png');*/
+  background-size: cover; 
+  width: 61px;
+  height: 31px;
+  top: 13px;
+  left: 90px;
+}
+
+
