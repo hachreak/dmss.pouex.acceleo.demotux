@@ -152,7 +152,7 @@
         default="30.0"
         maximum="100.0"
         name="Dirty"
-        MeasurementUnit="dirtness"/>
+        MeasurementUnit="dirtiness"/>
     <features
         xsi:type="pouexmm:Physic"
         maximum="100.0"
